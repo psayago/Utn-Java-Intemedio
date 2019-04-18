@@ -1,20 +1,13 @@
 package edu.utn.intermedio.modelo;
 
-public class Boxeador {
-	private String nombre;
+import java.time.LocalDate;
+
+public class Boxeador extends Persona{
 	private Categoria categoria;
 	
 	public Boxeador(String x) {
-		this.nombre = x;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+		this.setNombre(x);
+	}	
 
 	public Categoria getCategoria() {
 		return categoria;
@@ -28,6 +21,23 @@ public class Boxeador {
 	public String toString() {
 		String laCategoria =(categoria == null?"sincategoria":categoria.toString());
 		return this.getNombre() + " " + laCategoria;
+	}
+
+
+
+
+	@Override
+	public void presentarse() {
+		String presentacion = String.format("%s : %s : %s",getNombre(),getCategoria().toString(),getIdentificacion());
+		System.out.println(presentacion);
+		
+	}
+
+	@Override
+	public boolean esMayorDeEdad() {
+		LocalDate fecha = LocalDate.now();
+		int anioActual = fecha.getYear();
+		return anioActual-this.getAnioNacimiento() >= 15;
 	}
 	
 

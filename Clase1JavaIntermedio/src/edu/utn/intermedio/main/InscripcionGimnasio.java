@@ -1,4 +1,4 @@
-package edu.utn.intermedio.main;
+ package edu.utn.intermedio.main;
 
 import edu.utn.intermedio.modelo.Boxeador;
 import edu.utn.intermedio.modelo.Categoria;
@@ -9,9 +9,9 @@ public class InscripcionGimnasio {
 	public static void main(String[] args) {
 		
 		Boxeador box = new Boxeador("Pepe");
-		box.setCategoria(Categoria.LIGERO);
+		box.setCategoria(Categoria.mediano);
 		Boxeador box2 = new Boxeador("Pipo");
-		box2.setCategoria(Categoria.PESADO);
+		box2.setCategoria(Categoria.welter);
 		Boxeador box3 = new Boxeador("Peppo");
 		
 		
@@ -19,16 +19,30 @@ public class InscripcionGimnasio {
 		System.out.println(box2);
 
 		
-		Entrenador ent = new Entrenador("Juan", Categoria.PLUMA, Categoria.PESADO,2 );
+		Entrenador ent = new Entrenador("maximiliano", Categoria.mediano, Categoria.pesado,2 );
+		
+		
+		ent.setAnioNacimiento(1999);		
+		System.out.println(ent.esMayorDeEdad());
+		
+		box2.setAnioNacimiento(2002);
+		System.out.println(box2.esMayorDeEdad());
+		
+		ent.setIdentificacion("1321321");
+		
+		
+		
 		System.out.println(ent.asignarBoxeador(box));
 		System.out.println(ent.asignarBoxeador(box2));
 		System.out.println(ent.asignarBoxeador(box3));
 		
-		System.out.println("");
 		
+		System.out.println("");
+		ent.presentarse();
 		System.out.println("Mostrar boxeadores:");
 		ent.imprimirBoxeadores();
-
+		
+		System.out.println(ent.esNombreValido());
 
 	}
 

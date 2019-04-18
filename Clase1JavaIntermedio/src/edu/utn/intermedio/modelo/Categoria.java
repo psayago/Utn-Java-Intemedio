@@ -1,8 +1,26 @@
 package edu.utn.intermedio.modelo;
 
 public enum Categoria {
-	PLUMA,
-	LIGERO,
-	PESADO,
-	WELTER
+	mediano(10,20),
+	pesado(22,990),
+	welter(1,8);
+	
+	private int pesoMinimo;
+	private int pesoMaximo;
+	
+	private Categoria(int min, int max) {
+		this.pesoMinimo=min;
+		this.pesoMaximo=max;
+	}
+
+	public int getPesoMinimo() {
+		return pesoMinimo;
+	}
+
+	public int getPesoMaximo() {
+		return pesoMaximo;
+	}
+	
+	
+
 }
