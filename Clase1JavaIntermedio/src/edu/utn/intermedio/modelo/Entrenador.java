@@ -2,6 +2,7 @@ package edu.utn.intermedio.modelo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Random;
 
 public class Entrenador extends Persona{
 	private int cantidadMaximaBoxeadores;
@@ -18,7 +19,11 @@ public class Entrenador extends Persona{
 	}
 	
 	public void entrenar() {
-		
+		Random random = new Random();			
+		for (Boxeador boxeador : boxeadores) {
+			boxeador.entrenarse(random.nextInt(30),random.nextBoolean());
+		}
+				
 	}
 			
 
@@ -50,6 +55,7 @@ public class Entrenador extends Persona{
 
 		
 	}
+	
 	
 
 }

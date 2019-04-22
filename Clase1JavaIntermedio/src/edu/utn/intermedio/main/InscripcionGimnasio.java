@@ -19,7 +19,7 @@ public class InscripcionGimnasio {
 		System.out.println(box2);
 
 		
-		Entrenador ent = new Entrenador("maximiliano", Categoria.mediano, Categoria.pesado,2 );
+		Entrenador ent = new Entrenador("maximiliano", Categoria.mediano, Categoria.pesado,3);
 		
 		
 		ent.setAnioNacimiento(1999);		
@@ -43,7 +43,14 @@ public class InscripcionGimnasio {
 		ent.imprimirBoxeadores();
 		
 		System.out.println(ent.esNombreValido());
-
+		
+		System.out.println("SOBRECARGA...");
+		box.setCantMinutosEntrenamiento(6);
+		box.entrenarse();
+		box.entrenarse(8);
+		box.entrenarse(8,true);
+		System.out.println("Entrenador comienza a entrenar a sus boxeadores ");
+		ent.entrenar();
 	}
 
 }
