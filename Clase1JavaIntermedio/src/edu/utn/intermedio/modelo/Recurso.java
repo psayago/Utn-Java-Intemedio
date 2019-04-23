@@ -12,7 +12,7 @@ public class Recurso implements Identificable {
 	}
 
 	@Override
-	public String identificacion() {
+	public String identificate() {
 		return "recurso: " + this.etiqueta;
 		
 	}

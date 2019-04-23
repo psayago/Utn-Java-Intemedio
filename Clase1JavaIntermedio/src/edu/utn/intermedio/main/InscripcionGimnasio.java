@@ -14,13 +14,18 @@ public class InscripcionGimnasio {
 	public static void main(String[] args) {
 		
 		
-		Collection<Identificable> activosGimnasio = new ArrayList();
+		Collection<Identificable> activosGimnasio = new ArrayList<Identificable>();
 		
 		Boxeador box = new Boxeador("Pepe");
 		box.setCategoria(Categoria.mediano);
+		activosGimnasio.add(box);
+		
 		Boxeador box2 = new Boxeador("Pipo");
 		box2.setCategoria(Categoria.welter);
+		activosGimnasio.add(box2);
+		
 		Boxeador box3 = new Boxeador("Peppo");
+		activosGimnasio.add(box3);
 		
 		
 		System.out.println(box3);
@@ -28,15 +33,13 @@ public class InscripcionGimnasio {
 
 		
 		Entrenador ent = new Entrenador("maximiliano", Categoria.mediano, Categoria.pesado,3);
-		
+		activosGimnasio.add(ent);
 		
 		ent.setAnioNacimiento(1999);		
 		System.out.println(ent.esMayorDeEdad());
 		
 		box2.setAnioNacimiento(2002);
 		System.out.println(box2.esMayorDeEdad());
-		
-		ent.setIdentificacion("1321321");
 		
 		
 		
@@ -65,14 +68,18 @@ public class InscripcionGimnasio {
 		Recurso recurso1 = new Recurso();
 		recurso1.setEtiqueta("MN-0419");
 		activosGimnasio.add(recurso1);
-		
+					
 		Recurso recurso2 = new Recurso();
-		recurso1.setEtiqueta("MN-0419");
 		activosGimnasio.add(recurso2);
+		recurso2.setEtiqueta("MN-0420");
 		
 		Recurso recurso3 = new Recurso();
-		recurso1.setEtiqueta("MN-0419");
 		activosGimnasio.add(recurso3);
+		recurso3.setEtiqueta("MN-0421");
+		
+		for (Identificable activo : activosGimnasio) {
+			System.out.println(activo.identificate());
+		}
 		
 	}
 

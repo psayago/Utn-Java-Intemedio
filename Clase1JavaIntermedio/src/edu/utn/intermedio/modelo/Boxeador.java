@@ -92,9 +92,10 @@ public class Boxeador extends Persona implements Identificable{
 		return anioActual-this.getAnioNacimiento() >= 15;
 	}
 
+	
 	@Override
-	public String identificacion() {
-		return this.getIdentificacion();
+	public String identificate() {
+		return "boxeador: " + this.getIdentificacion();
 	}
 	
 

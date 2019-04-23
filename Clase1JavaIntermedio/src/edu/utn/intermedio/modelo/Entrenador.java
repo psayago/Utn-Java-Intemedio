@@ -21,7 +21,7 @@ public class Entrenador extends Persona implements Identificable{
 	public void entrenar() {
 		Random random = new Random();			
 		for (Boxeador boxeador : boxeadores) {
-			boxeador.entrenarse(random.nextInt(30),random.nextBoolean());
+			boxeador.entrenarse(random.nextInt(5),random.nextBoolean());
 		}
 				
 	}
@@ -57,8 +57,8 @@ public class Entrenador extends Persona implements Identificable{
 	}
 
 	@Override
-	public String identificacion() {
-		return this.getIdentificacion();
+	public String identificate() {
+		return "Entrenador: " + this.getIdentificacion();
 	}
 	
 	
