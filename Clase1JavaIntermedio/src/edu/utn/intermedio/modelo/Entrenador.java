@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Random;
 
-public class Entrenador extends Persona{
+public class Entrenador extends Persona implements Identificable{
 	private int cantidadMaximaBoxeadores;
 	private Collection<Boxeador> boxeadores;
 	private Categoria[] categorias;
@@ -55,6 +55,12 @@ public class Entrenador extends Persona{
 
 		
 	}
+
+	@Override
+	public String identificacion() {
+		return this.getIdentificacion();
+	}
+	
 	
 	
 

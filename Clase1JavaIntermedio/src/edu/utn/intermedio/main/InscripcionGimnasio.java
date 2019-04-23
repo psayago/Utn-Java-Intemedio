@@ -1,12 +1,20 @@
  package edu.utn.intermedio.main;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import edu.utn.intermedio.modelo.Boxeador;
 import edu.utn.intermedio.modelo.Categoria;
 import edu.utn.intermedio.modelo.Entrenador;
+import edu.utn.intermedio.modelo.Identificable;
+import edu.utn.intermedio.modelo.Recurso;
 
 public class InscripcionGimnasio {
 
 	public static void main(String[] args) {
+		
+		
+		Collection<Identificable> activosGimnasio = new ArrayList();
 		
 		Boxeador box = new Boxeador("Pepe");
 		box.setCategoria(Categoria.mediano);
@@ -44,13 +52,28 @@ public class InscripcionGimnasio {
 		
 		System.out.println(ent.esNombreValido());
 		
+		/*
 		System.out.println("SOBRECARGA...");
 		box.setCantMinutosEntrenamiento(6);
 		box.entrenarse();
 		box.entrenarse(8);
 		box.entrenarse(8,true);
+		*/
 		System.out.println("Entrenador comienza a entrenar a sus boxeadores ");
 		ent.entrenar();
+		
+		Recurso recurso1 = new Recurso();
+		recurso1.setEtiqueta("MN-0419");
+		activosGimnasio.add(recurso1);
+		
+		Recurso recurso2 = new Recurso();
+		recurso1.setEtiqueta("MN-0419");
+		activosGimnasio.add(recurso2);
+		
+		Recurso recurso3 = new Recurso();
+		recurso1.setEtiqueta("MN-0419");
+		activosGimnasio.add(recurso3);
+		
 	}
 
 }

@@ -2,7 +2,7 @@ package edu.utn.intermedio.modelo;
 
 import java.time.LocalDate;
 
-public class Boxeador extends Persona{
+public class Boxeador extends Persona implements Identificable{
 	private Categoria categoria;
 	private int cantMinutosEntrenamiento;
 	
@@ -90,6 +90,11 @@ public class Boxeador extends Persona{
 		LocalDate fecha = LocalDate.now();
 		int anioActual = fecha.getYear();
 		return anioActual-this.getAnioNacimiento() >= 15;
+	}
+
+	@Override
+	public String identificacion() {
+		return this.getIdentificacion();
 	}
 	
 
