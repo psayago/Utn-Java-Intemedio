@@ -19,10 +19,11 @@ public class InscripcionGimnasio {
 		Boxeador box = new Boxeador("Pepe");
 		box.setCategoria(Categoria.mediano);
 		activosGimnasio.add(box);
-		
+				
 		Boxeador box2 = new Boxeador("Pipo");
 		box2.setCategoria(Categoria.welter);
 		activosGimnasio.add(box2);
+		box2.saludar();
 		
 		Boxeador box3 = new Boxeador("Peppo");
 		activosGimnasio.add(box3);
@@ -77,6 +78,8 @@ public class InscripcionGimnasio {
 		activosGimnasio.add(recurso3);
 		recurso3.setEtiqueta("MN-0421");
 		
+		System.out.println("");
+		System.out.println("Listar inventario");
 		for (Identificable activo : activosGimnasio) {
 			System.out.println(activo.identificate());
 		}
