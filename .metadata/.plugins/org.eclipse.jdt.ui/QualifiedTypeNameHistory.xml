@@ -4,4 +4,8 @@
 <fullyQualifiedTypeName name="edu.utn.intermedio.modelo.Categoria"/>
 <fullyQualifiedTypeName name="edu.utn.intermedio.modelo.Entrenador"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
 </qualifiedTypeNameHistroy>

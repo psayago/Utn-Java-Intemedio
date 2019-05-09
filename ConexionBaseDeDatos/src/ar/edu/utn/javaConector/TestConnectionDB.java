@@ -22,7 +22,7 @@ public class TestConnectionDB {
 		
 		try {
 			connection = DriverManager
-			.getConnection("jdbc:mysql://localhost:3306/java?useLegacyDatetimeCode=false&serverTimezone=UTC","newuser","java123");
+			.getConnection("jdbc:mysql://localhost:3306/java?useLegacyDatetimeCode=false&serverTimezone=UTC","newuser","java1234");
 		
 		} catch(SQLException e) {
 			System.out.println("Fallo la conexion!! Mirar la consola con el resultado");
